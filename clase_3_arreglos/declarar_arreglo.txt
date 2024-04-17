@@ -1,0 +1,8 @@
+Algoritmo declarar_arreglo
+	// declaramos las variables
+	Arreglo arr[5]
+	
+	Para i = 0 Hasta 5 Con Paso 1 Hacer
+		// acciones varias
+	Fin Para
+FinAlgoritmo

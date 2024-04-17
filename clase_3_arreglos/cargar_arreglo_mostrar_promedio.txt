@@ -1,0 +1,30 @@
+Algoritmo ejemplo_1
+	// iniciacialización de las variables
+	Escribir "ingrese los elementos del arreglo: "
+	Dimension arr[8]
+	suma  = 0
+	contador = 0
+	suma_fuera = 0
+	
+	// se obtienen los valores del arreglo
+	Para idx = 1 hasta 8 Hacer
+		Escribir "Ingrese el dato ", idx, ": "
+		Leer arr[idx]
+		
+		Si arr[idx] >= 18 y arr[idx] <= 22 Entonces
+			suma = suma + arr[idx]
+			contador = contador + 1
+		SiNo
+			suma_fuera = suma_fuera + arr[idx]
+		FinSi
+	FinPara
+	
+	promedio = suma / contador
+	
+	// resultado
+	Escribir "la cantidad de estudiantes en el rango (18 ~ 20 ) es ", contador
+	Escribir "la suma de las edades de estudiantes en el rango (18 ~ 20 ) es ", suma
+	Escribir "el promedio de edad de los estudiantes en el rango (18 ~ 20 ) es ", promedio
+	Escribir "la suma de edades de estudiantes fuera del rango (18 ~ 20 ) es ", suma_fuera
+
+FinAlgoritmo
