@@ -6,11 +6,11 @@ using namespace std;
 
 int main()
 {
-   
+
     int i = 5;
     int j = 13;
-    int *punt; 
-    punt = &i; 
+    int *punt;
+    punt = &i;
     cout << *punt << endl; // Muestra el valor de i
     punt = &j;
     cout << *punt << endl; // Ahora muestra el valor de j
