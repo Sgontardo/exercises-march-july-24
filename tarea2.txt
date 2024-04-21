@@ -1,0 +1,168 @@
+Tarea No. 2
+Calcular el Orden de Complejidad de las siguientes funciones:
+1. Sumatoria de los primeros n números:
+
+def suma_n(n):
+    suma = 0
+    for i in range(1, n+1):
+        suma += i
+    return suma
+
+# Ejemplo de uso
+resultado = suma_n(5)
+print(resultado)
+
+2. Búsqueda de un objetivo:
+
+def busqueda_lineal(array, objetivo):
+    for elemento in array:
+        if elemento == objetivo:
+            return True
+    return False
+
+# Ejemplo de uso
+array = [3, 1, 4, 1, 5, 9, 2, 6, 5]
+objetivo = 9
+resultado = busqueda_lineal(array, objetivo)
+print(resultado)
+
+3. Duplicar elementos:
+
+def duplicar_elementos(array):
+    nuevo_array = []
+    for elemento in array:
+        nuevo_array.append(elemento * 2)
+    return nuevo_array
+
+# Ejemplo de uso
+array = [1, 2, 3, 4, 5]
+resultado = duplicar_elementos(array)
+print(resultado)
+
+4. Ordenación de un arreglo:
+
+def ordenacion(array):
+    n = len(array)
+    for i in range(n):
+        intercambiado = False
+        for j in range(n-i-1):
+            if array[j] > array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+                intercambiado = True
+        if not intercambiado:
+            break
+    return array
+
+# Ejemplo de uso
+array = [64, 34, 25, 12, 22, 11, 90]
+resultado = ordenacion(array)
+print(resultado)
+
+5. Permutaciones:
+
+def permutaciones(lista):
+    if len(lista) == 1:
+        return [lista]
+
+    todas_permutaciones = []
+
+    for i in range(len(lista)):
+        sublista = lista[:i] + lista[i+1:]
+        subpermutaciones = permutaciones(sublista)
+
+        for permutacion in subpermutaciones:
+            todas_permutaciones.append([lista[i]] + permutacion)
+
+    return todas_permutaciones
+
+# Ejemplo de uso
+lista = [1, 2, 3]
+resultado = permutaciones(lista)
+print(resultado)
+
+6. Suma de n números:
+
+def suma_n(n):
+    return n * (n + 1) // 2
+
+# Ejemplo de uso
+n = 5
+resultado = suma_n(n)
+print(resultado)
+
+
+Funciones recursivas:
+
+7. Cree una función recursiva llamada cuenta_regresiva(n), la cual debe imprimir los números desde el n ingresado hasta cero.
+
+8. Cree una función recursiva llamada suma_dígitos(numero), la cual debe sumar los dígitos que componen el número ingresado. Por ejemplo:
+
+    numero = 123
+    resutado = suma_dígitos(numero)
+    print(resultado) ## debe dar 6
+
+9. Cree una función llamada potencia(base, exponente) la cual debe devolver como resultado baseexponente , usando recursividad. Por ejemplo potencia(2, 3) debería dar 8
+
+10. Cree una función recursiva llamada imprimir_reversa(string) que reciba como parámetro una cadena de caracteres y los imprima al revez, por ejemplo imprimir_reversa(“Hola mundo”) debe dar odnuM aloH.
+
+
+Arreglos:
+
+11. Cree un programa en Python que invierta el orden de un arreglo, ejemplo, se tiene: np.array([1, 2, 3, 4, 5]) el resultado debe ser [5, 4, 3, 2, 1]
+
+12. Cree un función en Python llamada suma_espejo(arr1, arr2) que reciba como parámetros dosarreglos de igual longitud y devuelva otro arreglo con la suma de los valores del primer índice del primer arreglo con el último índice del segundo arreglo, la suma del valor del segundo índice del primer arreglo con el penúltimo valor del segundo arreglo. Por ejemplo:
+
+    arr1 = [1, 2, 3],
+    arr2 = [1, 2, 3],
+    el resultado será result = [4, 4, 4]
+
+13. Cree una función llamada concatena_array(arr1, arr2), la cual va a recibir dos array de strings de igual longitud y va a dar como resultado un string con la concatenación de los strings de cada par de indices de los arreglos. Por ejemplo:
+
+    arr1 = np.array(["la", "de", "pradera", "de"]) y arr2 =
+    np.array(["casa", "la", "es", "madera"]),
+    el resultado debe ser “ la casa de la pradera es de madera”
+
+
+Enumerados:
+
+14. Se tiene el siguiente código que hace una simulación de cuestionario:
+
+from random import randint
+
+class Respuestas(Enum):
+    CORRECTO = "Respuesta correcta"
+    INCORRECTO = "La respuesta es incorrecta"
+    SIN_RESPUESTA = "Sin responder"
+
+class Preguntas(Enum):
+    PRIMERA = "¿Capital de Venezuela?"
+    SEGUNDA = "¿Cuánto es 2 x 7"
+    TERCERA = "¿Dónde queda la UCAB?"
+
+def preguntas():
+    number = randint(1,3)
+    # su código aqui
+
+def respuesta(preg, res):
+    # su código aqui
+
+# Programa principal
+if __name__ == "__main__":
+    while True:
+        pregunta = preguntas()
+        print(pregunta)
+        print()
+
+        resp = input("Indique su respuesta: ")
+
+        result = respuesta(pregunta, resp)
+        print(result)
+
+        continuar = input("Desea continuar [s/n]: ").lower()
+        if continuar == "n":
+            break
+    print("Hasta Luego")
+
+Complete las funciones preguntas() y respuestas(), para que al ejecutar el programa principal indique si la respuesta fue correcta, incorrecta o si se dejo sin contestar. En las funciones DEBE usar los tipos Enum mostrados.
+
+La función preguntas() no recibe parámetros y debe devolver de forma aleatoria algunas de las preguntas del Enum Preguntas, la función respuesta(preg, resp) recibe dos parámetros, el primero es la pregunta que generó el sistema, la segunda la respuesta que ingresó el usuario, y debe devolver del Enum Respuesta, según sea el caso.
