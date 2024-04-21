@@ -1,0 +1,17 @@
+Algoritmo:
+
+arreglo = arr[8]
+
+i = 0
+total = 0
+suma = 0
+
+Mientras arr[i] >= 18 y arr[i] <= 22 Entonces:
+    total += arr[i]
+    i += 1
+Sino:
+    suma += arr[i]
+
+promedio = suma/i
+Escribir promedio
+Escribir suma
