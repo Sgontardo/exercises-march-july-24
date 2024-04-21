@@ -10,7 +10,7 @@ from enum import Enum
 
 ## 4) Complejidad algoritmo ordenacion(array) = O(n^2) (Cuadrática)
 
-## 5) Complejidad algoritmo permutaciones(lista) = O(n!) (Factorial)
+## 5) Complejidad algoritmo permutaciones(lista) = O(n!) (Explosión combonatoria)
 
 ## 6) Complejidad algoritmo suma de n números = O(n) (Lineal)
 
