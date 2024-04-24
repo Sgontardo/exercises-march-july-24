@@ -8,5 +8,3 @@ def busqueda_ineficiente(arreglo, elemento):
 # algoritmo eficiente:
 def busqueda_eficiente(arreglo, elemento):
     return elemento in arreglo
-
-
