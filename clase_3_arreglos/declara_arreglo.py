@@ -7,4 +7,4 @@ print(vector1)
 i = 0
 while i < 3:
     print(vector1[i])
-    i = i +1
+    i = i + 1
