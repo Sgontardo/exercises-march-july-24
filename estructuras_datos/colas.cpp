@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 // Definición de la estructura de nodo
