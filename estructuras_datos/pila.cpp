@@ -20,7 +20,7 @@ void insertarNodo() {
     nuevo -> siguiente = primero;
     primero = nuevo;
 
-    cout << "Nodo ingresado con éxito" << endl;
+    cout << "Nodo ingresado" << endl;
 }
 
 
@@ -81,7 +81,7 @@ void modificarNodo() {
                 cout << "Nodo con el dato " << nodoBuscado << " encontrado" << endl;
                 cout << "Ingrese el nuevo dato para este nodo: ";
                 cin >> actual -> dato;
-                cout << "Nodo modificado con éxito" << endl;
+                cout << "Nodo modificado" << endl;
                 encontrado = true;
             }
             actual = actual -> siguiente;
@@ -115,7 +115,7 @@ void eliminarNodo() {
                 } else {
                     anterior -> siguiente = actual -> siguiente;
                 }
-                cout << "Nodo eliminado con éxito" << endl;
+                cout << "Nodo eliminado" << endl;
                 encontrado = true;
             }
             anterior = actual;
