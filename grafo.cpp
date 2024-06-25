@@ -4,6 +4,7 @@
 #include <cmath>
 
 const int NUM_CITIES = 25;
+const int M_PI = 3.14159265358979323846;
 
 // Estructura para representar una ciudad
 struct City {
